@@ -78,7 +78,7 @@ public class Inicio extends JFrame {
 		btnModoInvitado.setBounds(151, 161, 127, 23);
 		contentPane.add(btnModoInvitado);
 		
-		RoundedPanel panel = new RoundedPanel(30); // 30 es el radio del redondeado
+		RoundedPanel panel = new RoundedPanel(60); // 30 es el radio del redondeado
 		panel.setBackground(new Color(0, 0, 255, 128)); // Color semitransparente
 		panel.setBounds(120, 30, 190, 190);
 		contentPane.add(panel);
