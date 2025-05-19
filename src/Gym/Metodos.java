@@ -7,17 +7,27 @@ import java.time.LocalDateTime;
 public class Metodos {
 	
 	
-	public void agregarUsuario(String Nombre, int edad, int peso, int altura) {
-		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
-
+	public static void agregarUsuario(String nombre, int edad, int peso, int altura, String nombreUsuario, String password, String email, int telefono) {
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym");
 		LocalDateTime hoy = LocalDateTime.now();
 		String fechaSQL = hoy.getYear() + "/" + hoy.getMonthValue() + "/" + hoy.getDayOfMonth();
 	
-		System.out.println(fechaSQL);
+
 		try {
 			conexion.conectar();
-			String sentencia = "INSERT INTO usuarios (Nombre, Edad, Peso, Altura, FechaRegistro, Entrenando) VALUES ('Jorge', 19, 67, 175, '" + fechaSQL + "', false);";
+			String sentencia = "INSERT INTO usuarios (nombre, edad, peso, altura, fechaRegistro, entrenando) VALUES ('" + nombre + "'," + edad + "," + peso + "," + altura + ", '" + fechaSQL + "', false);";
 			
+			
+			conexion.ejecutarInsertDeleteUpdate(sentencia);
+			
+			sentencia = "SELECT id FROM usuarios"
+					+ " WHERE nombre ='" + nombre + "' AND edad =" + edad + ";";
+			
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			int id = rs.getInt("id");
+			
+			sentencia = "INSERT INTO cuentas (id, nombreUsuario, password, email, telefono) VALUES (" + id + ", '" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";
 			conexion.ejecutarInsertDeleteUpdate(sentencia);
 		} catch (SQLException e) {
 
@@ -28,7 +38,21 @@ public class Metodos {
 	}
 	
 	
-	public static void inicioSesion() {}
+	public static void inicioSesion(String user, String password) {
+	
+	ConexionMySQL conexion  = new ConexionMySQL("root", "", "gym");
+	
+	try {
+		
+		conexion.conectar();
+		String sentencia = "SELECT ";
+
+		
+	}catch (SQLException e) {
+		
+		e.printStackTrace();
+	}
+	}
 	
 	
 	
