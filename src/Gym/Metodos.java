@@ -15,20 +15,36 @@ public class Metodos {
 
 		try {
 			conexion.conectar();
-			String sentencia = "INSERT INTO usuarios (nombre, edad, peso, altura, fechaRegistro, entrenando) VALUES ('" + nombre + "'," + edad + "," + peso + "," + altura + ", '" + fechaSQL + "', false);";
 			
-			
-			conexion.ejecutarInsertDeleteUpdate(sentencia);
-			
-			sentencia = "SELECT id FROM usuarios"
-					+ " WHERE nombre ='" + nombre + "' AND edad =" + edad + ";";
-			
+			String sentencia = "SELECT nombreusuario FROM cuentas;";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			int id = rs.getInt("id");
+			if (rs.getString("nombreUsuario") == null) {
+				
+				sentencia = "INSERT INTO cuentas (nombreUsuario, password, email, telefono) VALUES ('" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";
+				
+				conexion.ejecutarInsertDeleteUpdate(sentencia);
+				
+				sentencia = "SELECT id2 FROM cuentas"
+						+ " WHERE email ='" + email + "';";
+				
+				rs = conexion.ejecutarSelect(sentencia);
+				rs.next();
+				int id2 = rs.getInt("id2");
+				
+				sentencia = "INSERT INTO usuarios (id2, nombre, edad, peso, altura, fechaRegistro, entrenando) VALUES (" + id2 + ",'" + nombre + "'," + edad + "," + peso + "," + altura + ", '" + fechaSQL + "', false);";
+				
+				
+				
+				conexion.ejecutarInsertDeleteUpdate(sentencia);
+				
+			}else {
+				
+				System.out.println("Eso ya existe máquina");
+			}
 			
-			sentencia = "INSERT INTO cuentas (id, nombreUsuario, password, email, telefono) VALUES (" + id + ", '" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";
-			conexion.ejecutarInsertDeleteUpdate(sentencia);
+			
+			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
