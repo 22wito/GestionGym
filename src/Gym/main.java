@@ -10,7 +10,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Metodos.Aforo();
+		Metodos.agregarUsuario("Pedro", 25, 62, 179, "Maquina", "pass", "correo@gmail.com", 999999999);
 	}
 
 }
