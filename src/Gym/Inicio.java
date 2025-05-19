@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -14,6 +16,9 @@ import javax.swing.JLayeredPane;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
 import java.awt.Rectangle;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 
 public class Inicio extends JFrame {
 
@@ -50,13 +55,17 @@ public class Inicio extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblAcceso = new JLabel("ACCESO");
+		lblAcceso.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAcceso.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblAcceso.setBounds(168, 45, 95, 37);
+		lblAcceso.setBounds(30, 45, 376, 37);
 		contentPane.add(lblAcceso);
 		
 		JButton btnIniciarSesion = new JButton("Iniciar Sesión");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				VentanaInicioSesion V2 = new VentanaInicioSesion();
+				V2.setVisible(true);
 			}
 		});
 		btnIniciarSesion.setBounds(151, 127, 127, 23);
@@ -65,6 +74,9 @@ public class Inicio extends JFrame {
 		JButton btnRegistrar = new JButton("Registrarse");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				VentanaRegistro V3 = new VentanaRegistro();
+				V3.setVisible(true);
 			}
 		});
 		btnRegistrar.setBounds(151, 93, 127, 23);
@@ -73,6 +85,9 @@ public class Inicio extends JFrame {
 		JButton btnModoInvitado = new JButton("Modo Invitado");
 		btnModoInvitado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				AlertaConfirmacion V1 = new AlertaConfirmacion();
+				V1.setVisible(true);
 			}
 		});
 		btnModoInvitado.setBounds(151, 161, 127, 23);
