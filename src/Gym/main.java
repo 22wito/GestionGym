@@ -10,7 +10,8 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Metodos.agregarUsuario("Pedro", 25, 62, 179, "Maquina", "pass", "correo@gmail.com", 999999999);
+		final int idUsuario = Metodos.agregarUsuario("Hugo", 25, 87, 190, "yoyo", "root", "holabuenas2@gmail.com", 123856789);
+		System.out.println(idUsuario);
 	}
 
 }
