@@ -47,20 +47,24 @@ public class Inicio extends JFrame {
 	public Inicio() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(196, 247, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
+		contentPane = new FondoPanel("src/Imagenes/GymImage.jpg");
+		//contentPane.setBackground(new Color(196, 247, 255));
+		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); 
+		
 		setContentPane(contentPane);
+
+		//setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblAcceso = new JLabel("ACCESO");
+		lblAcceso.setForeground(new Color(183, 188, 210));
 		lblAcceso.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAcceso.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblAcceso.setFont(new Font("Tw Cen MT", Font.PLAIN, 26));
 		lblAcceso.setBounds(30, 45, 376, 37);
 		contentPane.add(lblAcceso);
 		
-		JButton btnIniciarSesion = new JButton("Iniciar Sesión");
+		BotonGrisElegante btnIniciarSesion = new BotonGrisElegante("Iniciar Sesión");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -71,7 +75,7 @@ public class Inicio extends JFrame {
 		btnIniciarSesion.setBounds(151, 127, 127, 23);
 		contentPane.add(btnIniciarSesion);
 		
-		JButton btnRegistrar = new JButton("Registrarse");
+		BotonGrisElegante btnRegistrar = new BotonGrisElegante("Registrarse");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -82,7 +86,7 @@ public class Inicio extends JFrame {
 		btnRegistrar.setBounds(151, 93, 127, 23);
 		contentPane.add(btnRegistrar);
 		
-		JButton btnModoInvitado = new JButton("Modo Invitado");
+		BotonGrisElegante btnModoInvitado = new BotonGrisElegante("Modo Invitado");
 		btnModoInvitado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -94,9 +98,11 @@ public class Inicio extends JFrame {
 		contentPane.add(btnModoInvitado);
 		
 		RoundedPanel panel = new RoundedPanel(60); // 30 es el radio del redondeado
-		panel.setBackground(new Color(0, 0, 255, 128)); // Color semitransparente
+		panel.setBackground(new Color(0, 0, 0, 190)); // Color semitransparente
 		panel.setBounds(120, 30, 190, 190);
 		contentPane.add(panel);
+		
+		
 
 	}
 }

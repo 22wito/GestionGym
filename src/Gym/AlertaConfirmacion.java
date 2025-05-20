@@ -1,5 +1,6 @@
 package Gym;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,7 +17,7 @@ public class AlertaConfirmacion extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private final JLabel lblNewLabel_1 = new JLabel("No podrás acceder a:");
+	private final JLabel lblPoderAcceder = new JLabel("No podrás acceder a:");
 	public static boolean modo;
 
 	/**
@@ -42,26 +43,31 @@ public class AlertaConfirmacion extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(23, 26, 36));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("ALERTA!");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 52));
-		lblNewLabel.setBounds(101, 0, 230, 118);
-		contentPane.add(lblNewLabel);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(48, 112, 198, 31);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblAlerta = new JLabel("ALERTA!");
+		lblAlerta.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAlerta.setFont(new Font("Tw Cen MT", Font.PLAIN, 52));
+		lblAlerta.setBounds(101, 0, 230, 118);
+		lblAlerta.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblAlerta);
+		lblPoderAcceder.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
+		lblPoderAcceder.setBounds(48, 112, 198, 31);
+		lblPoderAcceder.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblPoderAcceder);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("- Información o funciones de usuario.");
-		lblNewLabel_2_1.setBounds(48, 153, 339, 14);
-		contentPane.add(lblNewLabel_2_1);
+		JLabel lblProhibiciones = new JLabel("- Información o funciones de usuario.");
+		lblProhibiciones.setFont(new Font("Tw Cen MT", Font.PLAIN, 11));
+		lblProhibiciones.setBounds(48, 153, 339, 14);
+		lblProhibiciones.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblProhibiciones);
 		
-		JButton btnNewButton = new JButton("ACEPTAR");
-		btnNewButton.addActionListener(new ActionListener() {
+		BotonConEstilo btnAceptar = new BotonConEstilo("ACEPTAR");
+		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				modo=true;
@@ -69,11 +75,10 @@ public class AlertaConfirmacion extends JFrame {
 				V4.setVisible(true);
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		btnNewButton.setBounds(10, 201, 186, 49);
-		contentPane.add(btnNewButton);
+		btnAceptar.setBounds(10, 201, 186, 49);
+		contentPane.add(btnAceptar);
 		
-		JButton btnVolver = new JButton("VOLVER");
+		BotonRojoAlerta btnVolver = new BotonRojoAlerta("VOLVER");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -81,7 +86,6 @@ public class AlertaConfirmacion extends JFrame {
 				V0.setVisible(true);
 			}
 		});
-		btnVolver.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnVolver.setBounds(238, 201, 186, 49);
 		contentPane.add(btnVolver);
 	}
