@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class Metodos {
 	
 	
-	public static void agregarUsuario(String nombre, int edad, int peso, int altura, String nombreUsuario, String password, String email, int telefono) {
+	public static int agregarUsuario(String nombre, int edad, int peso, int altura, String nombreUsuario, String password, String email, int telefono) {
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym");
 		LocalDateTime hoy = LocalDateTime.now();
 		String fechaSQL = hoy.getYear() + "/" + hoy.getMonthValue() + "/" + hoy.getDayOfMonth();
@@ -16,9 +16,11 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT nombreusuario FROM cuentas;";
+			String sentencia = "SELECT nombreUsuario FROM cuentas WHERE nombreUsuario = '" + nombreUsuario + "';";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
+			System.out.println(rs.next());
+			
 			if (rs.getString("nombreUsuario") == null) {
 				
 				sentencia = "INSERT INTO cuentas (nombreUsuario, password, email, telefono) VALUES ('" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";
@@ -37,10 +39,11 @@ public class Metodos {
 				
 				
 				conexion.ejecutarInsertDeleteUpdate(sentencia);
-				
+				return id2;
 			}else {
 				
 				System.out.println("Eso ya existe máquina");
+				return -1;
 			}
 			
 			
@@ -48,13 +51,14 @@ public class Metodos {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
+			return 0;
 		}
 	
 	
 	}
 	
 	
-	public static void inicioSesion(String user, String password) {
+	public static int inicioSesion(String user, String password) {
 	
 	ConexionMySQL conexion  = new ConexionMySQL("root", "", "gym");
 	
@@ -62,13 +66,14 @@ public class Metodos {
 		
 		conexion.conectar();
 		String sentencia = "SELECT ";
-
+		return 5;
 		
 	}catch (SQLException e) {
 		
 		e.printStackTrace();
 	}
 	}
+	
 	
 	
 	
@@ -94,25 +99,39 @@ public class Metodos {
 		}
 	}
 	
-	
-	public void desHabilitarUsuario() {
-		/*
+	public static double calcularIMC(int idUsuario) {
+		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
-
-		LocalDateTime hoy = LocalDateTime.now();
-		String fechaSQL = hoy.getYear() + "/" + hoy.getMonthValue() + "/" + hoy.getDayOfMonth();
-	
-		System.out.println(fechaSQL);
+		
 		try {
 			conexion.conectar();
-			String sentencia = "INSERT INTO usuarios (Nombre, Edad, Peso, Altura, FechaRegistro, Entrenando) VALUES ('Jorge', 19, 67, 175, '" + fechaSQL + "', false);";
-			conexion.ejecutarInsertDeleteUpdate(sentencia);
+			
+			String sentencia = "SELECT altura AS 'Altura' FROM usuarios WHERE id2 =" + idUsuario + ";";		//Selecciona la altura del id de usuario introducido
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			double altura = rs.getInt("Altura");
+			altura = altura/100;
+			
+			sentencia = "SELECT Peso 'Peso' FROM usuarios WHERE id2 =" + idUsuario + ";";					//Selecciona el peso del id de usuario introducido
+			rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			
+			int peso = rs.getInt("Peso");
+			
+			if (altura != 0 && peso != 0) {												//Se comprueba si los datos obtenidos son válidos
+				double imc = peso/(altura * altura); 
+				return imc;
+			}else {
+				return 1;						//En caso de devolver 1, avisar de que faltan datos de altura o peso.
+			}
+			
+			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
+			return 0;							//En caso de devolver 0, avisar de que ha ocurrido un error desconocido.
 		}
-		*/
+		
 	}
-	
 	
 }
