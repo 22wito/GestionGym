@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class AplicacionPrincipal extends JFrame {
 
@@ -81,6 +82,8 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnGymcaracteristicas = new BotonGrisElegante("Características");
 		btnGymcaracteristicas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				PrincipalCaracteristicas V4 = new PrincipalCaracteristicas(); //asignar ,0 para la id
+				V4.setVisible(true);
 			}
 		});
 		btnGymcaracteristicas.setBounds(195, 238, 163, 78);
@@ -89,6 +92,8 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnNewButton_1_1_1 = new BotonGrisElegante("Contacto");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				PrincipalContacto V4 = new PrincipalContacto(); //asignar ,0 para la id
+				V4.setVisible(true);
 			}
 		});
 		btnNewButton_1_1_1.setBounds(380, 238, 163, 78);
@@ -97,6 +102,8 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnCalculosSalud = new BotonGrisElegante("Salud");
 		btnCalculosSalud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				PrincipalSalud V4 = new PrincipalSalud(); //asignar ,0 para la id
+				V4.setVisible(true);
 			}
 		});
 		btnCalculosSalud.setBounds(291, 327, 163, 78);
@@ -133,6 +140,11 @@ public class AplicacionPrincipal extends JFrame {
 			btnSI.setVisible(true);
 		}
 		
+		if (modo==true) {
+			btnNO.setVisible(false);
+			btnSI.setVisible(false);
+		}
+		
 		btnNO.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnNO.setBounds(703, 479, 71, 71);
 		contentPane.add(btnNO);
@@ -140,6 +152,12 @@ public class AplicacionPrincipal extends JFrame {
 		btnSI.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnSI.setBounds(703, 479, 71, 71);
 		contentPane.add(btnSI);
+		
+		JLabel lblNewLabel_2 = new JLabel("?");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 28));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setBounds(716, 490, 46, 46);
+		contentPane.add(lblNewLabel_2);
 		
 		btnNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
