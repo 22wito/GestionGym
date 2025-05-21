@@ -258,6 +258,28 @@ public class Metodos {
 	
 	
 	
-	
+	public static boolean getEntrenando(int idUsuario) {
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			boolean estado = rs.getBoolean("entrenando");
+			
+			return estado;
+			
+			
+		
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return false;
+		}
+	}
 	
 }
