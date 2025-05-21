@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 public class Metodos {
 	
 	
-	public static int agregarUsuario(String nombre, int edad, int peso, int altura, String nombreUsuario, String password, String email, int telefono) {
-		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym");
+	public static int agregarUsuario(String nombre, int edad, int peso, int altura, String nombreUsuario, String password, String email, int telefono) {		//Datos de entrada
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym");																							//Conecta a la BD
 		LocalDateTime hoy = LocalDateTime.now();
 		String fechaSQL = hoy.getYear() + "/" + hoy.getMonthValue() + "/" + hoy.getDayOfMonth();
 	
@@ -16,34 +16,36 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT nombreUsuario FROM cuentas WHERE nombreUsuario = '" + nombreUsuario + "';";
+			String sentencia = "SELECT nombreUsuario FROM cuentas WHERE nombreUsuario = '" + nombreUsuario + "';";				//Selecciona el nombre de usuario introducido
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
-			rs.next();
-			System.out.println(rs.next());
 			
-			if (rs.getString("nombreUsuario") == null) {
+			
+			
+			if (!rs.next()) {																									//Comprueba que no exista eicho usuario
 				
-				sentencia = "INSERT INTO cuentas (nombreUsuario, password, email, telefono) VALUES ('" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";
+				sentencia = "INSERT INTO cuentas (nombreUsuario, password, email, telefono) "
+						+ "VALUES ('" + nombreUsuario + "','" + password + "','" + email + "'," + telefono+ ");";		//Inserta los datos introducidos en la tabla cuentas (información de la cuenta)
 				
 				conexion.ejecutarInsertDeleteUpdate(sentencia);
 				
-				sentencia = "SELECT id2 FROM cuentas"
+				sentencia = "SELECT id2 FROM cuentas"																	//Inserta los datos introducidos en la tabla usuario (información del usuario)
 						+ " WHERE email ='" + email + "';";
 				
 				rs = conexion.ejecutarSelect(sentencia);
 				rs.next();
 				int id2 = rs.getInt("id2");
 				
-				sentencia = "INSERT INTO usuarios (id2, nombre, edad, peso, altura, fechaRegistro, entrenando) VALUES (" + id2 + ",'" + nombre + "'," + edad + "," + peso + "," + altura + ", '" + fechaSQL + "', false);";
+				sentencia = "INSERT INTO usuarios (id2, nombre, edad, peso, altura, fechaRegistro, entrenando) "		//
+						+ "VALUES (" + id2 + ",'" + nombre + "'," + edad + "," + peso + "," + altura + ", '" + fechaSQL + "', false);";
 				
 				
 				
 				conexion.ejecutarInsertDeleteUpdate(sentencia);
-				return id2;
+				return id2;																								//Sidevuelve el id, todo está correcto
 			}else {
 				
 				System.out.println("Eso ya existe máquina");
-				return -1;
+				return -1;																								//Si devuelve return se debe avisar de que el usuario ya existe
 			}
 			
 			
@@ -51,26 +53,61 @@ public class Metodos {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return 0;
+			return 0;																									//Si devueve 0, ha ocurrido un error inesperado (intentarlo de nuevo)
 		}
 	
 	
 	}
 	
 	
-	public static int inicioSesion(String user, String password) {
+	public static int inicioSesion(String nombreUsuario, String password) {
 	
 	ConexionMySQL conexion  = new ConexionMySQL("root", "", "gym");
 	
 	try {
 		
 		conexion.conectar();
-		String sentencia = "SELECT ";
-		return 5;
+		String sentencia = "SELECT nombreUsuario, password FROM cuentas "
+				+ "WHERE nombreUsuario = '" + nombreUsuario + "' AND password = '" + password + "';";			//Selecciona los nombres de usuario iguales al introducido en la tabla cuentas
+		ResultSet rs = conexion.ejecutarSelect(sentencia);	
+		
+		if(rs.next()) {
+
+			sentencia = "SELECT id2 FROM cuentas WHERE nombreUsuario ='" + nombreUsuario + "';";						//Selecciona el id relacionado a dicho nombre de usuario
+			rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			int id2 = rs.getInt("id2");
+			System.out.println(id2);
+			return id2;																					//Devuelve el id de usuario para guardar en una constante y poder utilizarla para el resto de necesidades
+			
+		}else {
+			sentencia = "SELECT nombreUsuario FROM cuentas WHERE nombreUsuario = '" + nombreUsuario + "';";
+			rs = conexion.ejecutarSelect(sentencia);
+			boolean user = rs.next();
+			
+			sentencia = "SELECT nombreUsuario, password FROM cuentas "
+					+ "WHERE nombreUsuario = '" + nombreUsuario + "' AND password != '" + password + "';";
+			rs = conexion.ejecutarSelect(sentencia);
+			boolean pass = rs.next();
+			
+			if(user == false) {
+				
+				System.out.println("El usuario introducido no existe");
+				
+			}else if(pass == true) {
+				
+				System.out.println("Contraseña incorrecta");
+			}
+			return -1;																									//Si devuelve -1, No existe nombre de usuario, Mensaje de error, usuario ya existe
+		}
+		
+		
+		
 		
 	}catch (SQLException e) {
 		
 		e.printStackTrace();
+		return 0;																										//Si devuelve 0, informar de un error desconocido
 	}
 	}
 	
