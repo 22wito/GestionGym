@@ -93,6 +93,7 @@ public class Metodos {
 				
 				System.out.println("El usuario introducido no existe");
 				
+				
 			}else if(pass == true) {
 				
 				System.out.println("Contraseña incorrecta");
@@ -177,11 +178,11 @@ public class Metodos {
 			String sentencia = "SELECT nombre, edad, peso, altura, fecharegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			System.out.println(); rs.getInt("Nombre");
-			System.out.println(); rs.getInt("Edad");
-			System.out.println(); rs.getInt("Peso");
-			System.out.println(); rs.getInt("Altura");
-			System.out.println(); rs.getInt("FechaRegistro");
+			System.out.println("Nombre: " + rs.getString("Nombre")); 
+			System.out.println("Edad: " + rs.getString("Edad"));
+			System.out.println("Peso: " + rs.getString("Peso"));
+			System.out.println("Altura: " + rs.getString("Altura")); 
+			System.out.println("FechaRegistro: " + rs.getString("FechaRegistro"));
 			
 			
 		} catch (SQLException e) {
