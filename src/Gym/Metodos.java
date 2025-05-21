@@ -256,8 +256,6 @@ public class Metodos {
 		
 	}
 	
-	
-	
 	public static boolean getEntrenando(int idUsuario) {
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
