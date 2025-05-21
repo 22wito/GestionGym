@@ -172,7 +172,7 @@ public class Metodos {
 		
 	}
 	
-	public static void infoUsuario(int idUsuario) {
+	public static String infoUsuario(int idUsuario) {
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
@@ -182,16 +182,17 @@ public class Metodos {
 			String sentencia = "SELECT nombre, edad, peso, altura, fecharegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			System.out.println("Nombre: " + rs.getString("Nombre")); 
-			System.out.println("Edad: " + rs.getString("Edad"));
-			System.out.println("Peso: " + rs.getString("Peso"));
-			System.out.println("Altura: " + rs.getString("Altura")); 
-			System.out.println("FechaRegistro: " + rs.getString("FechaRegistro"));
+			return "Nombre: " + rs.getString("Nombre") + 
+			"Edad: " + rs.getString("Edad") +
+			"Peso: " + rs.getString("Peso") +
+			"Altura: " + rs.getString("Altura") +
+			"FechaRegistro: " + rs.getString("FechaRegistro");
 			
 			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
+			return null;
 		}
 		
 	}
