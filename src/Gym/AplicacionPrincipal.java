@@ -69,6 +69,7 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnAforo = new BotonGrisElegante("Aforo");
 		btnAforo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btnAforo.setBounds(380, 149, 163, 78);
