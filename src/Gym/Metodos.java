@@ -76,7 +76,6 @@ public class Metodos {
 			rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			int id2 = rs.getInt("id2");
-			System.out.println(id2);
 			return id2;																					//Devuelve el id de usuario para guardar en una constante y poder utilizarla para el resto de necesidades
 			
 		}else {
