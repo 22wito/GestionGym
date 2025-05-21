@@ -124,7 +124,7 @@ public class AplicacionPrincipal extends JFrame {
 		BotonRojoAlerta btnNO = new BotonRojoAlerta("NO");
 		boolean entrena = false;
 		
-		if (Metodos.getEntrenando == false) {
+		if (Metodos.getEntrenando(idModo) == false) {
 			btnNO.setVisible(true);
 		} else {
 			btnSI.setVisible(false);
