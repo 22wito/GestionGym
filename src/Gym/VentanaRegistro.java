@@ -82,8 +82,17 @@ public class VentanaRegistro extends JFrame {
 		    public void actionPerformed(ActionEvent e) {
 		        dispose();
 		        modo = false;
-		        // metodo iniciar sesion id
-		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo); //meter id
+		        
+		        String Nombre = txtabcd.getText();
+		        String Contra = textField_1.getText();
+		        String NombreUS = txtManolito.getText();
+		        String email = txtMedacgmailcom.getText();
+		        String telefono = textField_2.getText();
+		        int telefono2 = Integer.parseInt(telefono);
+		        
+		        int id = Metodos.agregarUsuario(Nombre, 0, 0, 0, NombreUS, Contra, email, telefono2);
+		        
+		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
 		        V4.setVisible(true);
 		    }
 		});

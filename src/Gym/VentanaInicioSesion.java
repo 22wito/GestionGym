@@ -111,8 +111,11 @@ public class VentanaInicioSesion extends JFrame {
 		    public void actionPerformed(ActionEvent e) {
 		        dispose();
 		        modo = false;
-		        // metodo iniciar sesion id
-		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo); //meter id
+		        String NombreUS = txtMedacgmailcom.getText();
+		        String Contra = txtabcd.getText();
+		        int id = Metodos.inicioSesion(NombreUS, Contra);
+		        
+		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
 		        V4.setVisible(true);
 		    }
 		});

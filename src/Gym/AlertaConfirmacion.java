@@ -71,7 +71,7 @@ public class AlertaConfirmacion extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				modo=true;
-				AplicacionPrincipal V4 = new AplicacionPrincipal(modo); //asignar ,0 para la id
+				AplicacionPrincipal V4 = new AplicacionPrincipal(modo, 0); //asignar ,0 para la id
 				V4.setVisible(true);
 			}
 		});

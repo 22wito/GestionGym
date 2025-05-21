@@ -20,7 +20,7 @@ public class AplicacionPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AplicacionPrincipal frame = new AplicacionPrincipal(false); //asignar ,0 para la id
+					AplicacionPrincipal frame = new AplicacionPrincipal(false, 0); //asignar ,0 para la id
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,12 +33,16 @@ public class AplicacionPrincipal extends JFrame {
 	 * Create the frame.
 	 * @param modo 
 	 */
-	public AplicacionPrincipal(boolean modo) { //asignar ,int id para la id
+	public AplicacionPrincipal(boolean modo, int id) { //asignar ,int id para la id
 		System.out.println(modo);
 		
-		/* if (modo == false) {
+		if (modo == false) {
 			idModo = id;
-		} */
+		} else {
+			id = 0;
+		}
+		System.out.println(id);
+		System.out.println(modo);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
