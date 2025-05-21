@@ -61,6 +61,8 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnNewButton = new BotonGrisElegante("Cuenta");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				PrincipalCuenta V4 = new PrincipalCuenta(); //asignar ,0 para la id
+				V4.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(195, 149, 163, 78);
@@ -109,6 +111,42 @@ public class AplicacionPrincipal extends JFrame {
 		lblNombrePers.setFont(new Font("Tahoma", Font.PLAIN, 45));
 		lblNombrePers.setBounds(380, 52, 275, 63);
 		contentPane.add(lblNombrePers);
+		
+		JLabel lblNewLabel_1 = new JLabel("ENTRENANDO");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel_1.setBounds(490, 484, 203, 56);
+		contentPane.add(lblNewLabel_1);
+		
+		
+		
+		
+		BotonConEstilo btnSI = new BotonConEstilo("SI");
+		BotonRojoAlerta btnNO = new BotonRojoAlerta("NO");
+		btnNO.setVisible(true);
+		btnSI.setVisible(false);
+		
+		btnNO.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		btnNO.setBounds(703, 479, 71, 71);
+		contentPane.add(btnNO);
+		
+		btnSI.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		btnSI.setBounds(703, 479, 71, 71);
+		contentPane.add(btnSI);
+		
+		btnNO.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnNO.setVisible(false);
+				btnSI.setVisible(true);
+			}
+		});
+		
+		btnSI.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnNO.setVisible(true);
+				btnSI.setVisible(false);
+			}
+		});
+
 		
 		if (modo == false) {
 			lblNombrePers.setText(Metodos.getNombre(idModo));
