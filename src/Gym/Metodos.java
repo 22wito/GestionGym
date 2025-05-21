@@ -125,11 +125,15 @@ public class Metodos {
 			
 			if (aforo < 360) {
 				
-				return "Hay aforo de sobra: " + (aforo*100)/360 + "%";
+				return (aforo*100)/360 + "%";
+			}else {
+				
+				return "El Gimnasio está lleno";
 			}
 		} catch (SQLException e) {
 
 			e.printStackTrace();
+			return null;
 		}
 	}
 	
