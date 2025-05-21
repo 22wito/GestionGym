@@ -114,9 +114,12 @@ public class VentanaInicioSesion extends JFrame {
 		        String NombreUS = txtMedacgmailcom.getText();
 		        String Contra = txtabcd.getText();
 		        int id = Metodos.inicioSesion(NombreUS, Contra);
-		        
-		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
-		        V4.setVisible(true);
+		        if (id == -1) {
+		        	System.out.println("REPITE");
+		        } else {
+		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
+			        V4.setVisible(true);
+		        }
 		    }
 		});
 
