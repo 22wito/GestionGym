@@ -58,8 +58,7 @@ public class Metodos {
 	
 	
 	}
-	
-	
+		
 	public static int inicioSesion(String nombreUsuario, String password) {
 	
 	ConexionMySQL conexion  = new ConexionMySQL("root", "", "gym");
@@ -85,7 +84,7 @@ public class Metodos {
 			rs = conexion.ejecutarSelect(sentencia);
 			boolean user = rs.next();
 			
-			sentencia = "SELECT nombreUsuario, password FROM cuentas "
+			sentencia = "SELECT nombreUsuario, password FROM cuentas "									//Selecciona los usuarios que coincidan con el nombre de usuario introducido pero con contraseña diferente
 					+ "WHERE nombreUsuario = '" + nombreUsuario + "' AND password != '" + password + "';";
 			rs = conexion.ejecutarSelect(sentencia);
 			boolean pass = rs.next();
@@ -110,10 +109,7 @@ public class Metodos {
 		return 0;																										//Si devuelve 0, informar de un error desconocido
 	}
 	}
-	
-	
-	
-	
+
 	public static void Aforo() {
 		
 		
@@ -122,7 +118,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT count(Entrenando) AS 'total' FROM `usuarios` WHERE entrenando = 1;";
+			String sentencia = "SELECT count(Entrenando) AS 'total' FROM usuarios WHERE entrenando = 1;";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			int aforo = rs.getInt("total");
@@ -171,4 +167,36 @@ public class Metodos {
 		
 	}
 	
+	public static void infoUsuario(int idUsuario) {
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT nombre, edad, peso, altura, fecharegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			System.out.println(); rs.getInt("Nombre");
+			System.out.println(); rs.getInt("Edad");
+			System.out.println(); rs.getInt("Peso");
+			System.out.println(); rs.getInt("Altura");
+			System.out.println(); rs.getInt("FechaRegistro");
+			
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 }
