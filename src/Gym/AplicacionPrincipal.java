@@ -126,8 +126,11 @@ public class AplicacionPrincipal extends JFrame {
 		
 		if (Metodos.getEntrenando(idModo) == false) {
 			btnNO.setVisible(true);
-		} else {
 			btnSI.setVisible(false);
+			
+		} else {
+			btnNO.setVisible(false);
+			btnSI.setVisible(true);
 		}
 		
 		btnNO.setFont(new Font("Tahoma", Font.PLAIN, 25));
