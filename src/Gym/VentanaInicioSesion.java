@@ -109,7 +109,7 @@ public class VentanaInicioSesion extends JFrame {
 
 		btnIniciar.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		        dispose();
+		        
 		        modo = false;
 		        String NombreUS = txtMedacgmailcom.getText();
 		        String Contra = txtabcd.getText();
@@ -117,6 +117,7 @@ public class VentanaInicioSesion extends JFrame {
 		        if (id == -1) {
 		        	System.out.println("REPITE");
 		        } else {
+		        	dispose();
 		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
 			        V4.setVisible(true);
 		        }
