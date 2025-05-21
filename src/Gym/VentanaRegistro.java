@@ -92,8 +92,14 @@ public class VentanaRegistro extends JFrame {
 		        
 		        int id = Metodos.agregarUsuario(Nombre, 0, 0, 0, NombreUS, Contra, email, telefono2);
 		        
-		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
-		        V4.setVisible(true);
+		        if (id == -1) {
+		        	System.out.println("REPITE");
+		        } else {
+		        	dispose();
+		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
+			        V4.setVisible(true);
+		        }
+
 		    }
 		});
 
