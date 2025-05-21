@@ -111,7 +111,8 @@ public class VentanaInicioSesion extends JFrame {
 		    public void actionPerformed(ActionEvent e) {
 		        dispose();
 		        modo = false;
-		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo);
+		        // metodo iniciar sesion id
+		        AplicacionPrincipal V4 = new AplicacionPrincipal(modo); //meter id
 		        V4.setVisible(true);
 		    }
 		});

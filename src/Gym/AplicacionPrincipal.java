@@ -11,6 +11,7 @@ public class AplicacionPrincipal extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private int idModo;
 
 	/**
 	 * Launch the application.
@@ -19,7 +20,7 @@ public class AplicacionPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AplicacionPrincipal frame = new AplicacionPrincipal(false);
+					AplicacionPrincipal frame = new AplicacionPrincipal(false); //asignar ,0 para la id
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,8 +33,12 @@ public class AplicacionPrincipal extends JFrame {
 	 * Create the frame.
 	 * @param modo 
 	 */
-	public AplicacionPrincipal(boolean modo) {
+	public AplicacionPrincipal(boolean modo) { //asignar ,int id para la id
 		System.out.println(modo);
+		
+		/* if (modo == false) {
+			idModo = id;
+		} */
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
