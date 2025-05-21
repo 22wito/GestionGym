@@ -123,9 +123,9 @@ public class Metodos {
 			rs.next();
 			int aforo = rs.getInt("total");
 			
-			if (aforo < 360) {
+			if (aforo < 50) {
 				
-				return (aforo*100)/360 + "%";
+				return (aforo*100)/50 + "%";
 			}else {
 				
 				return "El Gimnasio está lleno";
@@ -200,7 +200,7 @@ public class Metodos {
 	public static String getNombre(int idUsuario) {
 		
 		
-ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
 		try {
 			conexion.conectar();
@@ -220,7 +220,41 @@ ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
 	}
 
-	
+	public static void setEntrenando(int idUsuario) {
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			boolean estado = rs.getBoolean("entrenando");
+			
+			if(estado) {
+				
+				sentencia = "UPDATE usuarios SET entrenando = 0 WHERE id2 =" + idUsuario + ";";
+				conexion.ejecutarInsertDeleteUpdate(sentencia);
+			}else {
+				
+				sentencia = "UPDATE usuarios SET entrenando = 1 WHERE id2 =" + idUsuario + ";";
+				conexion.ejecutarInsertDeleteUpdate(sentencia);
+			}
+			
+			
+		
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+	}
 	
 	
 	
