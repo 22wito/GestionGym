@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class AplicacionPrincipal extends JFrame {
 
@@ -56,7 +58,7 @@ public class AplicacionPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Cuenta");
+		BotonGrisElegante btnNewButton = new BotonGrisElegante("Cuenta");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -64,7 +66,7 @@ public class AplicacionPrincipal extends JFrame {
 		btnNewButton.setBounds(195, 149, 163, 78);
 		contentPane.add(btnNewButton);
 		
-		JButton btnAforo = new JButton("Aforo");
+		BotonGrisElegante btnAforo = new BotonGrisElegante("Aforo");
 		btnAforo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -72,7 +74,7 @@ public class AplicacionPrincipal extends JFrame {
 		btnAforo.setBounds(380, 149, 163, 78);
 		contentPane.add(btnAforo);
 		
-		JButton btnGymcaracteristicas = new JButton("GymCaracteristicas");
+		BotonGrisElegante btnGymcaracteristicas = new BotonGrisElegante("Características");
 		btnGymcaracteristicas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -80,7 +82,7 @@ public class AplicacionPrincipal extends JFrame {
 		btnGymcaracteristicas.setBounds(195, 238, 163, 78);
 		contentPane.add(btnGymcaracteristicas);
 		
-		JButton btnNewButton_1_1_1 = new JButton("Contacto");
+		BotonGrisElegante btnNewButton_1_1_1 = new BotonGrisElegante("Contacto");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -88,12 +90,28 @@ public class AplicacionPrincipal extends JFrame {
 		btnNewButton_1_1_1.setBounds(380, 238, 163, 78);
 		contentPane.add(btnNewButton_1_1_1);
 		
-		JButton btnCalculosSalud = new JButton("Calculos Salud");
+		BotonGrisElegante btnCalculosSalud = new BotonGrisElegante("Salud");
 		btnCalculosSalud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		btnCalculosSalud.setBounds(291, 327, 163, 78);
 		contentPane.add(btnCalculosSalud);
+		
+		JLabel lblNewLabel = new JLabel("Bienvenido,");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 45));
+		lblNewLabel.setBounds(133, 52, 275, 63);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNombrePers = new JLabel("Usuario");
+		lblNombrePers.setFont(new Font("Tahoma", Font.PLAIN, 45));
+		lblNombrePers.setBounds(380, 52, 275, 63);
+		contentPane.add(lblNombrePers);
+		
+		if (modo == false) {
+			lblNombrePers.setText(Metodos.getNombre());
+		} else {
+			lblNombrePers.setText("Usuario");
+		}
 	}
 }
