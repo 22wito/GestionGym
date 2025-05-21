@@ -110,7 +110,7 @@ public class Metodos {
 	}
 	}
 
-	public static void Aforo() {
+	public static String Aforo() {
 		
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
@@ -124,7 +124,8 @@ public class Metodos {
 			int aforo = rs.getInt("total");
 			
 			if (aforo < 360) {
-				System.out.println("Hay aforo de sobra: " + (aforo*100)/360 + "%");
+				
+				return "Hay aforo de sobra: " + (aforo*100)/360 + "%";
 			}
 		} catch (SQLException e) {
 
