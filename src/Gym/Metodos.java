@@ -189,14 +189,35 @@ public class Metodos {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public static String getNombre(int idUsuario) {
 		
 		
+ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
-		
-		
-		
-		
-		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT nombre FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String nombre = rs.getString("Nombre"); 
+			
+			return nombre;
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
 		
 	}
+
+	
+	
+	
+	
+	
+	
 }

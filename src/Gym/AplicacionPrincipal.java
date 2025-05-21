@@ -109,7 +109,7 @@ public class AplicacionPrincipal extends JFrame {
 		contentPane.add(lblNombrePers);
 		
 		if (modo == false) {
-			lblNombrePers.setText(Metodos.getNombre());
+			lblNombrePers.setText(Metodos.getNombre(idModo));
 		} else {
 			lblNombrePers.setText("Usuario");
 		}
