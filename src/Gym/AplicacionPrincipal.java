@@ -122,8 +122,13 @@ public class AplicacionPrincipal extends JFrame {
 		
 		BotonConEstilo btnSI = new BotonConEstilo("SI");
 		BotonRojoAlerta btnNO = new BotonRojoAlerta("NO");
-		btnNO.setVisible(true);
-		btnSI.setVisible(false);
+		boolean entrena = false;
+		
+		if (Metodos.getEntrenando == false) {
+			btnNO.setVisible(true);
+		} else {
+			btnSI.setVisible(false);
+		}
 		
 		btnNO.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnNO.setBounds(703, 479, 71, 71);
@@ -137,6 +142,7 @@ public class AplicacionPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				btnNO.setVisible(false);
 				btnSI.setVisible(true);
+				Metodos.setEntrenando(idModo);
 			}
 		});
 		
@@ -144,6 +150,7 @@ public class AplicacionPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				btnNO.setVisible(true);
 				btnSI.setVisible(false);
+				Metodos.setEntrenando(idModo);
 			}
 		});
 
