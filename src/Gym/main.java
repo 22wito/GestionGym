@@ -10,7 +10,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Metodos.getNombre(6);
+		Metodos.setEntrenando(6);
 		
 	}
 
