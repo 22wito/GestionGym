@@ -280,6 +280,27 @@ public class Metodos {
 		}
 	}
 	
-	
+	public static String getEmail(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT email FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String email = rs.getString("email"); 
+			
+			return email;
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
 	
 }
