@@ -159,6 +159,11 @@ public class AplicacionPrincipal extends JFrame {
 		lblNewLabel_2.setBounds(716, 490, 46, 46);
 		contentPane.add(lblNewLabel_2);
 		
+		JLabel lblNewLabel_3 = new JLabel("GYMFIT");
+		lblNewLabel_3.setFont(new Font("SimSun", Font.PLAIN, 30));
+		lblNewLabel_3.setBounds(10, 481, 215, 63);
+		contentPane.add(lblNewLabel_3);
+		
 		btnNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnNO.setVisible(false);

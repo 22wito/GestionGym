@@ -102,6 +102,11 @@ public class Inicio extends JFrame {
 		panel.setBounds(120, 30, 190, 190);
 		contentPane.add(panel);
 		
+		JLabel lblNewLabel_3 = new JLabel("GYMFIT");
+		lblNewLabel_3.setFont(new Font("SimSun", Font.PLAIN, 30));
+		lblNewLabel_3.setBounds(10, 209, 215, 63);
+		contentPane.add(lblNewLabel_3);
+		
 		
 
 	}
