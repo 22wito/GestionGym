@@ -10,7 +10,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Metodos.setEntrenando(6);
+		Metodos.agregarUsuario("buenas", 0, 0, 0, "usuario2", "contraseña2", "elimeil", 000000000);
 		
 	}
 
