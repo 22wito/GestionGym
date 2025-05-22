@@ -62,7 +62,7 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnNewButton = new BotonGrisElegante("Cuenta");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PrincipalCuenta V4 = new PrincipalCuenta(); //asignar ,0 para la id
+				PrincipalCuenta V4 = new PrincipalCuenta(idModo,modo); //asignar ,0 para la id
 				V4.setVisible(true);
 			}
 		});
