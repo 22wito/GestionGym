@@ -111,7 +111,7 @@ public class PrincipalCuenta extends JFrame {
 			lblcambioemail.setText(Metodos.getEmail(id));
 			lblcambionumero.setText(Metodos.getNumero(id));
 			lblcambioregistro.setText(Metodos.getRegistro(id));
-			//settext
+			//settext 
 		} else {
 			lblcambionombre.setText("nombre");
 			lblcambioemail.setText("email");
