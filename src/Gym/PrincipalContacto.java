@@ -44,12 +44,48 @@ public class PrincipalContacto extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblAforo = new JLabel("Cuenta:");
+		JLabel lblAforo = new JLabel("Contacto:");
 		lblAforo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAforo.setFont(new Font("Tw Cen MT", Font.PLAIN, 52));
-		lblAforo.setBounds(53, 0, 323, 118);
+		lblAforo.setBounds(53, 11, 323, 67);
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
+		
+		JLabel lblNewLabel = new JLabel("Si desea proporcionar sugerencias escriba a:");
+		lblNewLabel.setForeground(new Color(183, 188, 210));
+		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblNewLabel.setBounds(53, 81, 323, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblSiNecesitaAyuda = new JLabel("Si necesita ayuda sobre cualquier tema escriba a:");
+		lblSiNecesitaAyuda.setForeground(new Color(183, 188, 210));
+		lblSiNecesitaAyuda.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblSiNecesitaAyuda.setBounds(53, 129, 323, 14);
+		contentPane.add(lblSiNecesitaAyuda);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Si los motivos son laborales escriba a:");
+		lblNewLabel_1_1.setForeground(new Color(183, 188, 210));
+		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblNewLabel_1_1.setBounds(53, 178, 323, 14);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JLabel lblGymfitsuggmailcom = new JLabel("gymfit.suggestions@gmail.com");
+		lblGymfitsuggmailcom.setForeground(new Color(183, 188, 210));
+		lblGymfitsuggmailcom.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblGymfitsuggmailcom.setBounds(75, 106, 323, 14);
+		contentPane.add(lblGymfitsuggmailcom);
+		
+		JLabel lblGymfitsupportgmailcom = new JLabel("gymfit.support@gmail.com");
+		lblGymfitsupportgmailcom.setForeground(new Color(183, 188, 210));
+		lblGymfitsupportgmailcom.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblGymfitsupportgmailcom.setBounds(75, 153, 323, 14);
+		contentPane.add(lblGymfitsupportgmailcom);
+		
+		JLabel lblGymfitlabgmailcom = new JLabel("gymfit.laboral@gmail.com");
+		lblGymfitlabgmailcom.setForeground(new Color(183, 188, 210));
+		lblGymfitlabgmailcom.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblGymfitlabgmailcom.setBounds(75, 203, 323, 14);
+		contentPane.add(lblGymfitlabgmailcom);
 	}
 
 }

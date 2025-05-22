@@ -62,7 +62,7 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnNewButton = new BotonGrisElegante("Cuenta");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PrincipalCuenta V4 = new PrincipalCuenta(); //asignar ,0 para la id
+				PrincipalCuenta V4 = new PrincipalCuenta(idModo,modo); //asignar ,0 para la id
 				V4.setVisible(true);
 			}
 		});
@@ -112,16 +112,19 @@ public class AplicacionPrincipal extends JFrame {
 		JLabel lblNewLabel = new JLabel("Bienvenido,");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 45));
 		lblNewLabel.setBounds(133, 52, 275, 63);
+		lblNewLabel.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNombrePers = new JLabel("Usuario");
 		lblNombrePers.setFont(new Font("Tahoma", Font.PLAIN, 45));
 		lblNombrePers.setBounds(380, 52, 275, 63);
+		lblNombrePers.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNombrePers);
 		
 		JLabel lblNewLabel_1 = new JLabel("ENTRENANDO");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblNewLabel_1.setBounds(490, 484, 203, 56);
+		lblNewLabel_1.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNewLabel_1);
 		
 		
@@ -157,11 +160,13 @@ public class AplicacionPrincipal extends JFrame {
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setBounds(716, 490, 46, 46);
+		lblNewLabel_2.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("GYMFIT");
 		lblNewLabel_3.setFont(new Font("SimSun", Font.PLAIN, 30));
 		lblNewLabel_3.setBounds(10, 481, 215, 63);
+		lblNewLabel_3.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNewLabel_3);
 		
 		btnNO.addActionListener(new ActionListener() {

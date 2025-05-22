@@ -105,6 +105,7 @@ public class Inicio extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("GYMFIT");
 		lblNewLabel_3.setFont(new Font("SimSun", Font.PLAIN, 30));
 		lblNewLabel_3.setBounds(10, 209, 215, 63);
+		lblNewLabel_3.setForeground(new Color(0, 0, 0));
 		contentPane.add(lblNewLabel_3);
 		
 		
