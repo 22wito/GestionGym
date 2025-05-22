@@ -280,15 +280,14 @@ public class Metodos {
 		}
 	}
 	
-	public static String getEmail(int idUsuario) {
-		
+	public static String getEmail(int idUsuario) {		
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT email FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT email FROM cuentas WHERE id2 = " + idUsuario + ";";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			String email = rs.getString("email"); 
@@ -302,5 +301,57 @@ public class Metodos {
 		}
 		
 	}
+	
+	public static String getRegistro(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT fechaRegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String fecha = rs.getString("fechaRegistro"); 
+			
+			return fecha;
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	public static String getNumero(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT telefono FROM cuentas WHERE id2 = " + idUsuario + ";";
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String telefono = rs.getString("telefono"); 
+			
+			return telefono;
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
 	
 }
