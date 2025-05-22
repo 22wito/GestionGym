@@ -62,7 +62,7 @@ public class VentanaInicioSesion extends JFrame {
 		lblNewLabel.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Email:");
+		JLabel lblNewLabel_1 = new JLabel("Nombre Usuario:");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
 		lblNewLabel_1.setBounds(24, 78, 160, 25);
@@ -78,7 +78,7 @@ public class VentanaInicioSesion extends JFrame {
 		
 		txtMedacgmailcom = new JTextField();
 		txtMedacgmailcom.setFont(new Font("Tw Cen MT", Font.PLAIN, 12));
-		txtMedacgmailcom.setText("medac@gmail.com");
+		txtMedacgmailcom.setText("Manolito34");
 		txtMedacgmailcom.setBounds(194, 79, 177, 25);
 		txtMedacgmailcom.setForeground(new Color(183, 188, 210));
 		contentPane.add(txtMedacgmailcom);
