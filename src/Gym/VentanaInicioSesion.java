@@ -116,6 +116,12 @@ public class VentanaInicioSesion extends JFrame {
 		        int id = Metodos.inicioSesion(NombreUS, Contra);
 		        if (id == -1) {
 		        	System.out.println("REPITE");
+		        	ErrorDatos V5 = new ErrorDatos();
+		        	V5.setVisible(true);
+		        } else if (id == 0) {
+		        	System.out.println("ERROR DESCONOCIDO"); //HACER VENTANA
+		        	ErrorDesconocido V6 = new ErrorDesconocido();
+		        	V6.setVisible(true);
 		        } else {
 		        	dispose();
 		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id

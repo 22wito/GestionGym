@@ -94,6 +94,8 @@ public class VentanaRegistro extends JFrame {
 		        
 		        if (id == -1) {
 		        	System.out.println("REPITE");
+		        } else if (id == 0) {
+		        	System.out.println("ERROR DESCONOCIDO"); //HACER VENTANA
 		        } else {
 		        	dispose();
 		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
