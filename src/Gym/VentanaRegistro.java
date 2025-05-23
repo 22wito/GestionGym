@@ -80,7 +80,7 @@ public class VentanaRegistro extends JFrame {
 
 		btnIniciar.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		        dispose();
+		        
 		        modo = false;
 		        
 		        String Nombre = txtabcd.getText();

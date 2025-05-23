@@ -53,7 +53,7 @@ public class Metodos {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return 0;																									//Si devueve 0, ha ocurrido un error inesperado (intentarlo de nuevo)
+			return -1;																									//Si devueve 0, ha ocurrido un error inesperado (intentarlo de nuevo)
 		}
 	
 	
@@ -90,7 +90,7 @@ public class Metodos {
 			
 			if(user == false) {
 				
-				System.out.println("El usuario introducido no existe");
+				System.out.println("El usuario introducido no existe");									//Si el usuario no existe, lo imprime por consola
 				
 				
 			}else if(pass == true) {
@@ -118,17 +118,17 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT count(Entrenando) AS 'total' FROM usuarios WHERE entrenando = 1;";
+			String sentencia = "SELECT count(Entrenando) AS 'total' FROM usuarios WHERE entrenando = 1;";				//Selecciona los que están entrenando
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			int aforo = rs.getInt("total");
 			
-			if (aforo < 50) {
+			if (aforo < 50) {																							//Comprueba si hay hueco
 				
-				return (aforo*100)/50 + "%";
-			}else {
+				return (aforo*100)/50 + "%";																			//Devuelve el aforo en porcentaje
+			}else {			
 				
-				return "El Gimnasio está lleno";
+				return "El Gimnasio está lleno";																		//imprime que el gimnasio está lleno
 			}
 		} catch (SQLException e) {
 
@@ -179,14 +179,14 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT nombre, edad, peso, altura, fecharegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT nombre, edad, peso, altura, fecharegistro FROM usuarios WHERE id2 = " + idUsuario + ";";			//Selecciona la información de salud del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			return "Nombre: " + rs.getString("Nombre") + 
 			"Edad: " + rs.getString("Edad") +
 			"Peso: " + rs.getString("Peso") +
 			"Altura: " + rs.getString("Altura") +
-			"FechaRegistro: " + rs.getString("FechaRegistro");
+			"FechaRegistro: " + rs.getString("FechaRegistro");																			//Imprime los datos recogidos
 			
 			
 		} catch (SQLException e) {
@@ -205,12 +205,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT nombre FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT nombre FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el nombre del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			String nombre = rs.getString("Nombre"); 
+			String nombre = rs.getString("Nombre"); 													
 			
-			return nombre;
+			return nombre;																								//Devuelve el nombre del usuario
 			
 		} catch (SQLException e) {
 
@@ -227,14 +227,14 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";						//Selecciona el estado de entrenamiento del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			boolean estado = rs.getBoolean("entrenando");
 			
-			if(estado) {
+			if(estado) {																								//Comprobamos estado de enrtenamiento y lo alternamos
 				
-				sentencia = "UPDATE usuarios SET entrenando = 0 WHERE id2 =" + idUsuario + ";";
+				sentencia = "UPDATE usuarios SET entrenando = 0 WHERE id2 =" + idUsuario + ";";							
 				conexion.ejecutarInsertDeleteUpdate(sentencia);
 			}else {
 				
@@ -263,7 +263,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";					//Selecciona el estado de entrenamiento del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			boolean estado = rs.getBoolean("entrenando");
@@ -287,13 +287,13 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT email FROM cuentas WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT email FROM cuentas WHERE id2 = " + idUsuario + ";";								//Selecciona el E-mail del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			String email = rs.getString("email"); 
+			String email = rs.getString("email"); 				
 			
-			return email;
-			
+			return email;																								//Devuelve el E-mail 
+				
 		} catch (SQLException e) {
 
 			e.printStackTrace();
@@ -310,12 +310,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT fechaRegistro FROM usuarios WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT fechaRegistro FROM usuarios WHERE id2 = " + idUsuario + ";";						//Selecciona la fecha de registro del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			String fecha = rs.getString("fechaRegistro"); 
 			
-			return fecha;
+			return fecha;																								//Devuelve 
 			
 		} catch (SQLException e) {
 
@@ -333,12 +333,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT telefono FROM cuentas WHERE id2 = " + idUsuario + ";";
+			String sentencia = "SELECT telefono FROM cuentas WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			String telefono = rs.getString("telefono"); 
+			String telefono = rs.getString("telefono"); 																
 			
-			return telefono;
+			return telefono;																							//devuelve el número de teléfono
 			
 		} catch (SQLException e) {
 
