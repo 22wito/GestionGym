@@ -101,7 +101,7 @@ public class VentanaRegistro extends JFrame {
 		        	ErrorDesconocido V6 = new ErrorDesconocido();
 		        	V6.setVisible(true);
 		        } else {
-		        	dispose();
+		        	dispose();  //Cierra ventana actual para abrir otra
 		        	AplicacionPrincipal V4 = new AplicacionPrincipal(modo, id); //meter id
 			        V4.setVisible(true);
 		        }
@@ -115,7 +115,7 @@ public class VentanaRegistro extends JFrame {
 		BotonRojoAlerta btnVolver = new BotonRojoAlerta("VOLVER");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				Inicio V0 = new Inicio();
 				V0.setVisible(true);
 			}
