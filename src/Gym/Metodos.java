@@ -41,7 +41,7 @@ public class Metodos {
 				
 				
 				conexion.ejecutarInsertDeleteUpdate(sentencia);
-				return id2;																								//Sidevuelve el id, todo está correcto
+				return id2;																								//Si devuelve el id, todo está correcto
 			}else {
 				
 				System.out.println("Eso ya existe máquina");
@@ -249,7 +249,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";					//Selecciona el estado de entrenamiento del usuario que ha iniciado sesión
+			String sentencia = "SELECT entrenando FROM usuarios WHERE id2 = " + idUsuario + ";";						//Selecciona el estado de entrenamiento del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			boolean estado = rs.getBoolean("entrenando");
@@ -301,7 +301,7 @@ public class Metodos {
 			rs.next();
 			String fecha = rs.getString("fechaRegistro"); 
 			
-			return fecha;																								//Devuelve 
+			return fecha;																								//Devuelve la fecha de registro del usuario que ha iniciado sesión
 			
 		} catch (SQLException e) {
 
@@ -342,12 +342,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT altura FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			String sentencia = "SELECT altura FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona la altura de teléfono del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			String altura = rs.getString("altura"); 																
 			
-			return altura;																							//devuelve el número de teléfono
+			return altura;																								//devuelve la altura de teléfono
 			
 		} catch (SQLException e) {
 
@@ -365,12 +365,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT peso FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			String sentencia = "SELECT peso FROM usuarios WHERE id2 = " + idUsuario + ";";								//Selecciona el peso del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			String peso = rs.getString("peso"); 																
 			
-			return peso;																							//devuelve el número de teléfono
+			return peso;																								//devuelve el peso de teléfono
 			
 		} catch (SQLException e) {
 
@@ -388,12 +388,12 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT edad FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			String sentencia = "SELECT edad FROM usuarios WHERE id2 = " + idUsuario + ";";								//Selecciona la edad del usuario que ha iniciado sesión
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
 			String edad = rs.getString("edad"); 																
 			
-			return edad;																							//devuelve el número de teléfono
+			return edad;																								//devuelve la edad de teléfono
 			
 		} catch (SQLException e) {
 
@@ -411,7 +411,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "UPDATE usuarios set peso = " + nuevoPeso + " WHERE id2 = " + idUsuario + ";";							
+			String sentencia = "UPDATE usuarios set peso = " + nuevoPeso + " WHERE id2 = " + idUsuario + ";";			//Actualiza el peso del usuario que ha iniciado sesión
 			conexion.ejecutarInsertDeleteUpdate(sentencia);
 																										
 			
@@ -431,7 +431,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "UPDATE usuarios set altura = " + nuevaAltura + " WHERE id2 = " + idUsuario + ";";							
+			String sentencia = "UPDATE usuarios set altura = " + nuevaAltura + " WHERE id2 = " + idUsuario + ";";		//Actualiza el peso del usuario que ha iniciado sesión						
 			conexion.ejecutarInsertDeleteUpdate(sentencia);
 																										
 			
@@ -451,7 +451,7 @@ public class Metodos {
 		try {
 			conexion.conectar();
 			
-			String sentencia = "UPDATE usuarios set edad = " + nuevaEdad + " WHERE id2 = " + idUsuario + ";";							
+			String sentencia = "UPDATE usuarios set edad = " + nuevaEdad + " WHERE id2 = " + idUsuario + ";";			//Actualiza el peso del usuario que ha iniciado sesión
 			conexion.ejecutarInsertDeleteUpdate(sentencia);
 																										
 			
