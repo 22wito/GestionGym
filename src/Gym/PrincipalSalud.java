@@ -130,9 +130,9 @@ public class PrincipalSalud extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (modo == false) {
-					Metodos.setAltura(textAltura.getText());
-					Metodos.setPeso(textPeso.getText());
-					Metodos.setEdad(textEdad.getText());
+					Metodos.setAltura(idModo, Integer.parseInt(textAltura.getText()));
+					Metodos.setPeso(idModo, Integer.parseInt(textPeso.getText()));
+					Metodos.setEdad(idModo, Integer.parseInt(textEdad.getText()));
 					
 				} else {
 					System.out.println("ERROR DESCONOCIDO"); //HACER VENTANA
