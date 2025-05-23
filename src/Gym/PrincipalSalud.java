@@ -126,7 +126,7 @@ public class PrincipalSalud extends JFrame {
 		contentPane.add(lblHacerCambios);
 		
 		BotonRojoAlerta btnNewButton = new BotonRojoAlerta("CAMBIO");
-		btnNewButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnNewButton.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (modo == false) {
