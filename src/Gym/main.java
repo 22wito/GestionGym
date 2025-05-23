@@ -10,45 +10,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Metodos.agregarUsuario("Ana García", 22, 55, 160, "anagarcia", "pass123", "ana1@gmail.com", 600123001);
-		Metodos.agregarUsuario("Luis Martínez", 30, 80, 180, "luismartinez", "pass456", "luis2@gmail.com", 600123002);
-		Metodos.agregarUsuario("Sofía López", 27, 60, 165, "sofialopez", "pass789", "sofia3@gmail.com", 600123003);
-		Metodos.agregarUsuario("Carlos Ruiz", 35, 85, 175, "carlosruiz", "pass101", "carlos4@gmail.com", 600123004);
-		Metodos.agregarUsuario("María Fernández", 29, 58, 162, "mariafernandez", "pass112", "maria5@gmail.com", 600123005);
-		Metodos.agregarUsuario("Pedro Sánchez", 40, 90, 182, "pedrosanchez", "pass131", "pedro6@gmail.com", 600123006);
-		Metodos.agregarUsuario("Laura Gómez", 24, 52, 158, "lauragomez", "pass141", "laura7@gmail.com", 600123007);
-		Metodos.agregarUsuario("Javier Díaz", 32, 78, 178, "javierdiaz", "pass151", "javier8@gmail.com", 600123008);
-		Metodos.agregarUsuario("Elena Morales", 26, 57, 163, "elenamorales", "pass161", "elena9@gmail.com", 600123009);
-		Metodos.agregarUsuario("Miguel Ángel", 28, 75, 170, "miguelangel", "pass171", "miguel10@gmail.com", 600123010);
-		Metodos.agregarUsuario("Carmen Torres", 33, 62, 167, "carmantorres", "pass181", "carmen11@gmail.com", 600123011);
-		Metodos.agregarUsuario("David Jiménez", 31, 82, 179, "davidjimenez", "pass191", "david12@gmail.com", 600123012);
-		Metodos.agregarUsuario("Isabel Castro", 25, 54, 159, "isabelcastro", "pass201", "isabel13@gmail.com", 600123013);
-		Metodos.agregarUsuario("Antonio Vargas", 36, 88, 183, "antoniovargas", "pass211", "antonio14@gmail.com", 600123014);
-		Metodos.agregarUsuario("Clara Romero", 23, 56, 161, "clararomero", "pass221", "clara15@gmail.com", 600123015);
-		Metodos.agregarUsuario("Rubén Ortiz", 34, 84, 181, "rubenortiz", "pass231", "ruben16@gmail.com", 600123016);
-		Metodos.agregarUsuario("Teresa Navarro", 27, 59, 164, "teresanavarro", "pass241", "teresa17@gmail.com", 600123017);
-		Metodos.agregarUsuario("Pablo Medina", 29, 77, 176, "pablomedina", "pass251", "pablo18@gmail.com", 600123018);
-		Metodos.agregarUsuario("Marta Serrano", 30, 61, 166, "martaserrano", "pass261", "marta19@gmail.com", 600123019);
-		Metodos.agregarUsuario("Diego Alonso", 38, 86, 180, "diegoalonso", "pass271", "diego20@gmail.com", 600123020);
-		Metodos.agregarUsuario("Lucía Bravo", 26, 53, 157, "luciabravo", "pass281", "lucia21@gmail.com", 600123021);
-		Metodos.agregarUsuario("Raúl Hidalgo", 33, 79, 177, "raulhidalgo", "pass291", "raul22@gmail.com", 600123022);
-		Metodos.agregarUsuario("Sara Delgado", 28, 58, 162, "saradelgado", "pass301", "sara23@gmail.com", 600123023);
-		Metodos.agregarUsuario("Álvaro Campos", 31, 83, 179, "alvarocampos", "pass311", "alvaro24@gmail.com", 600123024);
-		Metodos.agregarUsuario("Beatriz Gil", 24, 55, 160, "beatrizgil", "pass321", "beatriz25@gmail.com", 600123025);
-		Metodos.agregarUsuario("Óscar Peña", 35, 87, 182, "oscarpena", "pass331", "oscar26@gmail.com", 600123026);
-		Metodos.agregarUsuario("Nuria Rivas", 27, 60, 165, "nuriarivas", "pass341", "nuria27@gmail.com", 600123027);
-		Metodos.agregarUsuario("Héctor Luna", 29, 76, 175, "hectorluna", "pass351", "hector28@gmail.com", 600123028);
-		Metodos.agregarUsuario("Inés Molina", 32, 59, 163, "inesmolina", "pass361", "ines29@gmail.com", 600123029);
-		Metodos.agregarUsuario("Víctor Cano", 30, 80, 178, "victorcano", "pass371", "victor30@gmail.com", 600123030);
-		Metodos.agregarUsuario("Lorena Santos", 25, 54, 158, "lorenasantos", "pass381", "lorena31@gmail.com", 600123031);
-		Metodos.agregarUsuario("Marcos Pardo", 34, 85, 180, "marcospardo", "pass391", "marcos32@gmail.com", 600123032);
-		Metodos.agregarUsuario("Cristina Vega", 26, 57, 161, "cristinavega", "pass401", "cristina33@gmail.com", 600123033);
-		Metodos.agregarUsuario("Iván Rubio", 31, 82, 179, "ivanrubio", "pass411", "ivan34@gmail.com", 600123034);
-		Metodos.agregarUsuario("Patricia León", 28, 56, 160, "patricialeon", "pass421", "patricia35@gmail.com", 600123035);
-		Metodos.agregarUsuario("Adrián Cruz", 33, 84, 181, "adriancruz", "pass431", "adrian36@gmail.com", 600123036);
-		Metodos.agregarUsuario("Noelia Ramos", 27, 58, 162, "noeliaramos", "pass441", "noelia37@gmail.com", 600123037);
-		Metodos.agregarUsuario("Sergio Blanco", 30, 79, 177, "sergioblanco", "pass451", "sergio38@gmail.com", 600123038);
-		Metodos.agregarUsuario("Alicia Flores", 29, 55, 159, "aliciaflores", "pass461", "alicia39@gmail.com", 600123039);
+		Metodos.setEntrenando(35);
 		
 	}
 

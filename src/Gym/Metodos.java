@@ -53,7 +53,7 @@ public class Metodos {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return -1;																									//Si devueve 0, ha ocurrido un error inesperado (intentarlo de nuevo)
+			return -0;																									//Si devueve 0, ha ocurrido un error inesperado (intentarlo de nuevo)
 		}
 	
 	
@@ -137,37 +137,23 @@ public class Metodos {
 		}
 	}
 	
-	public static double calcularIMC(int idUsuario) {
+	public static String calcularIMC(int idUsuario) {
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
 		try {
 			conexion.conectar();
 			
-			String sentencia = "SELECT altura AS 'Altura' FROM usuarios WHERE id2 =" + idUsuario + ";";		//Selecciona la altura del id de usuario introducido
+			String sentencia = "SELECT calcular_imc(" + idUsuario + ") AS 'IMC';";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			double altura = rs.getInt("Altura");
-			altura = altura/100;
-			
-			sentencia = "SELECT Peso 'Peso' FROM usuarios WHERE id2 =" + idUsuario + ";";					//Selecciona el peso del id de usuario introducido
-			rs = conexion.ejecutarSelect(sentencia);
-			rs.next();
-			
-			int peso = rs.getInt("Peso");
-			
-			if (altura != 0 && peso != 0) {												//Se comprueba si los datos obtenidos son válidos
-				double imc = peso/(altura * altura); 
-				return imc;
-			}else {
-				return 1;						//En caso de devolver 1, avisar de que faltan datos de altura o peso.
-			}
+			return rs.getString("IMC");
 			
 			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return 0;							//En caso de devolver 0, avisar de que ha ocurrido un error desconocido.
+			return null;							//En caso de devolver null, avisar de que ha ocurrido un error desconocido.
 		}
 		
 	}
@@ -348,10 +334,133 @@ public class Metodos {
 		
 	}
 	
+	public static String getAltura(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT altura FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String altura = rs.getString("altura"); 																
+			
+			return altura;																							//devuelve el número de teléfono
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
 	
+	public static String getPeso(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT peso FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String peso = rs.getString("peso"); 																
+			
+			return peso;																							//devuelve el número de teléfono
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
 	
+	public static String getEdad(int idUsuario) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "SELECT edad FROM usuarios WHERE id2 = " + idUsuario + ";";							//Selecciona el número de teléfono del usuario que ha iniciado sesión
+			ResultSet rs = conexion.ejecutarSelect(sentencia);
+			rs.next();
+			String edad = rs.getString("edad"); 																
+			
+			return edad;																							//devuelve el número de teléfono
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
 	
+	public static void setPeso(int idUsuario, int nuevoPeso) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "UPDATE usuarios set peso = " + nuevoPeso + " WHERE id2 = " + idUsuario + ";";							
+			conexion.ejecutarInsertDeleteUpdate(sentencia);
+																										
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			
+		}
+		
+	}
 	
+	public static void setAltura(int idUsuario, int nuevaAltura) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "UPDATE usuarios set altura = " + nuevaAltura + " WHERE id2 = " + idUsuario + ";";							
+			conexion.ejecutarInsertDeleteUpdate(sentencia);
+																										
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			
+		}
+		
+	}
 	
+	public static void setEdad(int idUsuario, int nuevaEdad) {
+		
+		
+		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
+		
+		try {
+			conexion.conectar();
+			
+			String sentencia = "UPDATE usuarios set edad = " + nuevaEdad + " WHERE id2 = " + idUsuario + ";";							
+			conexion.ejecutarInsertDeleteUpdate(sentencia);
+																										
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			
+		}
+		
+	}
 	
 }
