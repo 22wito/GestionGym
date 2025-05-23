@@ -137,45 +137,23 @@ public class Metodos {
 		}
 	}
 	
-	public static double calcularIMC(int idUsuario) {
+	public static String calcularIMC(int idUsuario) {
 		
 		ConexionMySQL conexion = new ConexionMySQL("root", "", "gym") ;
 		
 		try {
 			conexion.conectar();
 			
-			/*
-			String sentencia = "SELECT altura AS 'Altura' FROM usuarios WHERE id2 =" + idUsuario + ";";		//Selecciona la altura del id de usuario introducido
-			ResultSet rs = conexion.ejecutarSelect(sentencia);
-			
-			rs.next();
-			double altura = rs.getInt("Altura");
-			altura = altura/100;
-			
-			sentencia = "SELECT Peso 'Peso' FROM usuarios WHERE id2 =" + idUsuario + ";";					//Selecciona el peso del id de usuario introducido
-			rs = conexion.ejecutarSelect(sentencia);
-			rs.next();
-			
-			int peso = rs.getInt("Peso");
-			
-			if (altura != 0 && peso != 0) {												//Se comprueba si los datos obtenidos son válidos
-				double imc = peso/(altura * altura); 
-				return imc;
-			}else {
-				return 1;						//En caso de devolver 1, avisar de que faltan datos de altura o peso.
-			}
-			
-			*/
 			String sentencia = "SELECT calcular_imc(" + idUsuario + ") AS 'IMC';";
 			ResultSet rs = conexion.ejecutarSelect(sentencia);
 			rs.next();
-			return rs.getInt("IMC");
+			return rs.getString("IMC");
 			
 			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return 0;							//En caso de devolver 0, avisar de que ha ocurrido un error desconocido.
+			return null;							//En caso de devolver null, avisar de que ha ocurrido un error desconocido.
 		}
 		
 	}
