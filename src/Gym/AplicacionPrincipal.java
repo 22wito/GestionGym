@@ -102,7 +102,7 @@ public class AplicacionPrincipal extends JFrame {
 		BotonGrisElegante btnCalculosSalud = new BotonGrisElegante("Salud");
 		btnCalculosSalud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PrincipalSalud V4 = new PrincipalSalud(); //asignar ,0 para la id
+				PrincipalSalud V4 = new PrincipalSalud(modo, idModo); //asignar ,0 para la id
 				V4.setVisible(true);
 			}
 		});

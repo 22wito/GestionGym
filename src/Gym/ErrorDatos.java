@@ -46,9 +46,9 @@ public class ErrorDatos extends JFrame {
 		
 		JLabel lblAforo = new JLabel("DATOS INCORRECTOS");
 		lblAforo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAforo.setFont(new Font("Tw Cen MT", Font.PLAIN, 52));
-		lblAforo.setBounds(53, 0, 323, 118);
-		lblAforo.setForeground(new Color(183, 188, 210));
+		lblAforo.setFont(new Font("Tw Cen MT", Font.PLAIN, 29));
+		lblAforo.setBounds(54, 68, 323, 118);
+		lblAforo.setForeground(new Color(255, 0, 0));
 		contentPane.add(lblAforo);
 	}
 
