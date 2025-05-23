@@ -67,7 +67,7 @@ public class Inicio extends JFrame {
 		BotonGrisElegante btnIniciarSesion = new BotonGrisElegante("Iniciar Sesión");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				VentanaInicioSesion V2 = new VentanaInicioSesion();
 				V2.setVisible(true);
 			}
@@ -78,7 +78,7 @@ public class Inicio extends JFrame {
 		BotonGrisElegante btnRegistrar = new BotonGrisElegante("Registrarse");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				VentanaRegistro V3 = new VentanaRegistro();
 				V3.setVisible(true);
 			}
@@ -89,7 +89,7 @@ public class Inicio extends JFrame {
 		BotonGrisElegante btnModoInvitado = new BotonGrisElegante("Modo Invitado");
 		btnModoInvitado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				AlertaConfirmacion V1 = new AlertaConfirmacion();
 				V1.setVisible(true);
 			}

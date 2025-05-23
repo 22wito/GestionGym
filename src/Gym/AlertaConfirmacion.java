@@ -69,7 +69,7 @@ public class AlertaConfirmacion extends JFrame {
 		BotonConEstilo btnAceptar = new BotonConEstilo("ACEPTAR");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				modo=true;
 				AplicacionPrincipal V4 = new AplicacionPrincipal(modo, 0); //asignar ,0 para la id
 				V4.setVisible(true);
@@ -81,7 +81,7 @@ public class AlertaConfirmacion extends JFrame {
 		BotonRojoAlerta btnVolver = new BotonRojoAlerta("VOLVER");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				dispose(); //Cierra ventana actual para abrir otra
 				Inicio V0 = new Inicio();
 				V0.setVisible(true);
 			}

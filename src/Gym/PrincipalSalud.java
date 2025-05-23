@@ -174,6 +174,7 @@ public class PrincipalSalud extends JFrame {
 		
 		JLabel lblDesactivado = new JLabel("DESACTIVADO");
 		lblDesactivado.setBounds(341, 206, 71, 14);
+		lblDesactivado.setFont(new Font("Tw Cen MT", Font.PLAIN, 11));
 		contentPane.add(lblDesactivado);
 		
 		if (modo == false) {
