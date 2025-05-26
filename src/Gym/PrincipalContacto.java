@@ -51,11 +51,11 @@ public class PrincipalContacto extends JFrame {
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
 		
-		JLabel lblNewLabel = new JLabel("Si desea proporcionar sugerencias escriba a:");
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel.setBounds(53, 81, 323, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblSugerencias = new JLabel("Si desea proporcionar sugerencias escriba a:");
+		lblSugerencias.setForeground(new Color(183, 188, 210));
+		lblSugerencias.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblSugerencias.setBounds(53, 81, 323, 14);
+		contentPane.add(lblSugerencias);
 		
 		JLabel lblSiNecesitaAyuda = new JLabel("Si necesita ayuda sobre cualquier tema escriba a:");
 		lblSiNecesitaAyuda.setForeground(new Color(183, 188, 210));
@@ -63,11 +63,11 @@ public class PrincipalContacto extends JFrame {
 		lblSiNecesitaAyuda.setBounds(53, 129, 323, 14);
 		contentPane.add(lblSiNecesitaAyuda);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Si los motivos son laborales escriba a:");
-		lblNewLabel_1_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1_1.setBounds(53, 178, 323, 14);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblMotivosLaborales = new JLabel("Si los motivos son laborales escriba a:");
+		lblMotivosLaborales.setForeground(new Color(183, 188, 210));
+		lblMotivosLaborales.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblMotivosLaborales.setBounds(53, 178, 323, 14);
+		contentPane.add(lblMotivosLaborales);
 		
 		JLabel lblGymfitsuggmailcom = new JLabel("gymfit.suggestions@gmail.com");
 		lblGymfitsuggmailcom.setForeground(new Color(183, 188, 210));

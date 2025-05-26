@@ -54,29 +54,29 @@ public class PrincipalCuenta extends JFrame {
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Nombre de Usuario:");
-		lblNewLabel_1_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1_1.setBounds(53, 119, 221, 14);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblUsuario = new JLabel("Nombre de Usuario:");
+		lblUsuario.setForeground(new Color(183, 188, 210));
+		lblUsuario.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblUsuario.setBounds(53, 119, 221, 14);
+		contentPane.add(lblUsuario);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Email:");
-		lblNewLabel_1_1_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1_1_1.setBounds(53, 144, 221, 14);
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setForeground(new Color(183, 188, 210));
+		lblEmail.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblEmail.setBounds(53, 144, 221, 14);
+		contentPane.add(lblEmail);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Teléfono:");
-		lblNewLabel_1_1_1_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1_1_1_1.setBounds(53, 169, 221, 14);
-		contentPane.add(lblNewLabel_1_1_1_1);
+		JLabel lblTelefono = new JLabel("Teléfono:");
+		lblTelefono.setForeground(new Color(183, 188, 210));
+		lblTelefono.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblTelefono.setBounds(53, 169, 221, 14);
+		contentPane.add(lblTelefono);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Fecha de Registro:");
-		lblNewLabel_1_1_1_1_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1_1_1_1_1.setBounds(53, 194, 221, 14);
-		contentPane.add(lblNewLabel_1_1_1_1_1);
+		JLabel lblFecha = new JLabel("Fecha de Registro:");
+		lblFecha.setForeground(new Color(183, 188, 210));
+		lblFecha.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblFecha.setBounds(53, 194, 221, 14);
+		contentPane.add(lblFecha);
 		
 		JLabel lblcambionombre = new JLabel("nombre");
 		lblcambionombre.setForeground(new Color(183, 188, 210));

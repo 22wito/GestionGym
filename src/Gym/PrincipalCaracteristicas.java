@@ -51,11 +51,11 @@ public class PrincipalCaracteristicas extends JFrame {
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
 		
-		JLabel lblNewLabel = new JLabel("Aforo limitado a 50 personas");
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel.setBounds(53, 81, 323, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblAforoLimite = new JLabel("Aforo limitado a 50 personas");
+		lblAforoLimite.setForeground(new Color(183, 188, 210));
+		lblAforoLimite.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblAforoLimite.setBounds(53, 81, 323, 14);
+		contentPane.add(lblAforoLimite);
 		
 		JLabel lblEquiposDeEntrenamiento = new JLabel("Equipos de entrenamiento variados y modernos");
 		lblEquiposDeEntrenamiento.setForeground(new Color(183, 188, 210));

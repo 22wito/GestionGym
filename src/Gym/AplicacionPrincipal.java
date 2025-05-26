@@ -109,11 +109,11 @@ public class AplicacionPrincipal extends JFrame {
 		btnCalculosSalud.setBounds(291, 327, 163, 78);
 		contentPane.add(btnCalculosSalud);
 		
-		JLabel lblNewLabel = new JLabel("Bienvenido,");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel.setBounds(133, 52, 275, 63);
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel);
+		JLabel lblBienvenido = new JLabel("Bienvenido,");
+		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 45));
+		lblBienvenido.setBounds(133, 52, 275, 63);
+		lblBienvenido.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblBienvenido);
 		
 		JLabel lblNombrePers = new JLabel("Usuario");
 		lblNombrePers.setFont(new Font("Tahoma", Font.PLAIN, 45));
@@ -121,11 +121,11 @@ public class AplicacionPrincipal extends JFrame {
 		lblNombrePers.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblNombrePers);
 		
-		JLabel lblNewLabel_1 = new JLabel("ENTRENANDO");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblNewLabel_1.setBounds(490, 484, 203, 56);
-		lblNewLabel_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1);
+		JLabel lblEntrenando = new JLabel("ENTRENANDO");
+		lblEntrenando.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblEntrenando.setBounds(490, 484, 203, 56);
+		lblEntrenando.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblEntrenando);
 		
 		
 		
@@ -156,18 +156,18 @@ public class AplicacionPrincipal extends JFrame {
 		btnSI.setBounds(703, 479, 71, 71);
 		contentPane.add(btnSI);
 		
-		JLabel lblNewLabel_2 = new JLabel("?");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(716, 490, 46, 46);
-		lblNewLabel_2.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_2);
+		JLabel lblModoInvitadoInterrogacion = new JLabel("?");
+		lblModoInvitadoInterrogacion.setFont(new Font("Tahoma", Font.PLAIN, 28));
+		lblModoInvitadoInterrogacion.setHorizontalAlignment(SwingConstants.CENTER);
+		lblModoInvitadoInterrogacion.setBounds(716, 490, 46, 46);
+		lblModoInvitadoInterrogacion.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblModoInvitadoInterrogacion);
 		
-		JLabel lblNewLabel_3 = new JLabel("GYMFIT");
-		lblNewLabel_3.setFont(new Font("SimSun", Font.PLAIN, 30));
-		lblNewLabel_3.setBounds(10, 481, 215, 63);
-		lblNewLabel_3.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_3);
+		JLabel lblGYMFIT = new JLabel("GYMFIT");
+		lblGYMFIT.setFont(new Font("SimSun", Font.PLAIN, 30));
+		lblGYMFIT.setBounds(10, 481, 215, 63);
+		lblGYMFIT.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblGYMFIT);
 		
 		btnNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

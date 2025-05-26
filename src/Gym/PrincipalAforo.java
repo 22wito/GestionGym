@@ -51,11 +51,11 @@ public class PrincipalAforo extends JFrame {
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
 		
-		JLabel lblNewLabel = new JLabel("Cantidad");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 55));
-		lblNewLabel.setBounds(86, 127, 261, 95);
-		contentPane.add(lblNewLabel);
-		lblNewLabel.setText(Metodos.Aforo());
+		JLabel lblCantidad = new JLabel("Cantidad");
+		lblCantidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCantidad.setFont(new Font("Tahoma", Font.PLAIN, 55));
+		lblCantidad.setBounds(86, 127, 261, 95);
+		contentPane.add(lblCantidad);
+		lblCantidad.setText(Metodos.Aforo());
 	}
 }

@@ -54,19 +54,19 @@ public class VentanaRegistro extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("REGISTRAR");
-		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 30));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(97, 10, 245, 57);
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel);
+		JLabel lblRegistrar = new JLabel("REGISTRAR");
+		lblRegistrar.setFont(new Font("Tw Cen MT", Font.PLAIN, 30));
+		lblRegistrar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrar.setBounds(97, 10, 245, 57);
+		lblRegistrar.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblRegistrar);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Nombre y apellidos:");
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
-		lblNewLabel_1_1.setBounds(28, 94, 160, 25);
-		lblNewLabel_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblNombre = new JLabel("Nombre y apellidos:");
+		lblNombre.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNombre.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+		lblNombre.setBounds(28, 94, 160, 25);
+		lblNombre.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblNombre);
 		
 		txtabcd = new JTextField();
 		txtabcd.setText("Manuel López Álvarez");
@@ -123,12 +123,12 @@ public class VentanaRegistro extends JFrame {
 		btnVolver.setBounds(238, 201, 186, 49);
 		contentPane.add(btnVolver);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Email:");
-		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
-		lblNewLabel_1_1_1.setBounds(28, 118, 160, 25);
-		lblNewLabel_1_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblEmail.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+		lblEmail.setBounds(28, 118, 160, 25);
+		lblEmail.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblEmail);
 		
 		txtMedacgmailcom = new JTextField();
 		txtMedacgmailcom.setText("medac@gmail.com");
@@ -138,12 +138,12 @@ public class VentanaRegistro extends JFrame {
 		txtMedacgmailcom.setForeground(new Color(183, 188, 210));
 		contentPane.add(txtMedacgmailcom);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Contraseña:");
-		lblNewLabel_1_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
-		lblNewLabel_1_1_1_1.setBounds(28, 142, 160, 25);
-		lblNewLabel_1_1_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1_1_1);
+		JLabel lblContraseña = new JLabel("Contraseña:");
+		lblContraseña.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblContraseña.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+		lblContraseña.setBounds(28, 142, 160, 25);
+		lblContraseña.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblContraseña);
 		
 		textField_1 = new JTextField();
 		textField_1.setText("1234abcd");
@@ -153,12 +153,12 @@ public class VentanaRegistro extends JFrame {
 		textField_1.setForeground(new Color(183, 188, 210));
 		contentPane.add(textField_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Teléfono:");
-		lblNewLabel_1_1_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
-		lblNewLabel_1_1_1_1_1.setBounds(28, 165, 160, 25);
-		lblNewLabel_1_1_1_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1_1_1_1);
+		JLabel lblTelefono = new JLabel("Teléfono:");
+		lblTelefono.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTelefono.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+		lblTelefono.setBounds(28, 165, 160, 25);
+		lblTelefono.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblTelefono);
 		
 		textField_2 = new JTextField();
 		textField_2.setText("987654321");
@@ -168,12 +168,12 @@ public class VentanaRegistro extends JFrame {
 		textField_2.setForeground(new Color(183, 188, 210));
 		contentPane.add(textField_2);
 		
-		JLabel lblNewLabel_1_1_1_1_1_1 = new JLabel("Nombre Usuario:");
-		lblNewLabel_1_1_1_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1_1_1_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
-		lblNewLabel_1_1_1_1_1_1.setBounds(28, 68, 160, 25);
-		lblNewLabel_1_1_1_1_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1_1_1_1_1);
+		JLabel lblUsuario = new JLabel("Nombre Usuario:");
+		lblUsuario.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblUsuario.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+		lblUsuario.setBounds(28, 68, 160, 25);
+		lblUsuario.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblUsuario); 
 		
 		txtManolito = new JTextField();
 		txtManolito.setText("manolito3432");

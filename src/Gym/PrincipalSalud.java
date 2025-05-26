@@ -58,11 +58,11 @@ public class PrincipalSalud extends JFrame {
 		lblAforo.setForeground(new Color(183, 188, 210));
 		contentPane.add(lblAforo);
 		
-		JLabel lblNewLabel = new JLabel("Altura:");
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel.setBounds(53, 81, 63, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblAltura = new JLabel("Altura:");
+		lblAltura.setForeground(new Color(183, 188, 210));
+		lblAltura.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblAltura.setBounds(53, 81, 63, 14);
+		contentPane.add(lblAltura);
 		
 		JLabel lblPeso = new JLabel("Peso:");
 		lblPeso.setForeground(new Color(183, 188, 210));
@@ -100,23 +100,23 @@ public class PrincipalSalud extends JFrame {
 		textPeso.setBounds(126, 230, 86, 20);
 		contentPane.add(textPeso);
 		
-		JLabel lblNewLabel_1 = new JLabel("Altura (cm):");
-		lblNewLabel_1.setForeground(new Color(183, 188, 210));
-		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblNewLabel_1.setBounds(30, 205, 63, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblAlturaCambiar = new JLabel("Altura (cm):");
+		lblAlturaCambiar.setForeground(new Color(183, 188, 210));
+		lblAlturaCambiar.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblAlturaCambiar.setBounds(30, 205, 63, 14);
+		contentPane.add(lblAlturaCambiar);
 		
-		JLabel lblPeso_1 = new JLabel("Peso (kg):");
-		lblPeso_1.setForeground(new Color(183, 188, 210));
-		lblPeso_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblPeso_1.setBounds(126, 205, 63, 14);
-		contentPane.add(lblPeso_1);
+		JLabel lblPesoCambiar = new JLabel("Peso (kg):");
+		lblPesoCambiar.setForeground(new Color(183, 188, 210));
+		lblPesoCambiar.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblPesoCambiar.setBounds(126, 205, 63, 14);
+		contentPane.add(lblPesoCambiar);
 		
-		JLabel lblEdad_1 = new JLabel("Edad (años):");
-		lblEdad_1.setForeground(new Color(183, 188, 210));
-		lblEdad_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
-		lblEdad_1.setBounds(222, 206, 86, 14);
-		contentPane.add(lblEdad_1);
+		JLabel lblEdadCambiar = new JLabel("Edad (años):");
+		lblEdadCambiar.setForeground(new Color(183, 188, 210));
+		lblEdadCambiar.setFont(new Font("Tw Cen MT", Font.PLAIN, 13));
+		lblEdadCambiar.setBounds(222, 206, 86, 14);
+		contentPane.add(lblEdadCambiar);
 		
 		JLabel lblHacerCambios = new JLabel("Hacer Cambios:");
 		lblHacerCambios.setHorizontalAlignment(SwingConstants.CENTER);
@@ -125,9 +125,9 @@ public class PrincipalSalud extends JFrame {
 		lblHacerCambios.setBounds(20, 170, 159, 36);
 		contentPane.add(lblHacerCambios);
 		
-		BotonRojoAlerta btnNewButton = new BotonRojoAlerta("CAMBIO");
-		btnNewButton.setFont(new Font("Segoe UI", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		BotonRojoAlerta btnCAMBIO = new BotonRojoAlerta("CAMBIO");
+		btnCAMBIO.setFont(new Font("Segoe UI", Font.BOLD, 12));
+		btnCAMBIO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (modo == false) {
 					Metodos.setAltura(idModo, Integer.parseInt(textAltura.getText()));
@@ -141,8 +141,8 @@ public class PrincipalSalud extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(335, 170, 89, 80);
-		contentPane.add(btnNewButton);
+		btnCAMBIO.setBounds(335, 170, 89, 80);
+		contentPane.add(btnCAMBIO);
 		
 		
 		
@@ -190,10 +190,10 @@ public class PrincipalSalud extends JFrame {
 		}
 		
 		if (modo == true) {
-			btnNewButton.setVisible(false);
+			btnCAMBIO.setVisible(false);
 			lblDesactivado.setVisible(true);
 		} else {
-			btnNewButton.setVisible(true);
+			btnCAMBIO.setVisible(true);
 			lblDesactivado.setVisible(false);
 		}
 		

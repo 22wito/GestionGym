@@ -55,26 +55,26 @@ public class VentanaInicioSesion extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("INICIAR SESIÓN");
-		lblNewLabel.setFont(new Font("Tw Cen MT", Font.PLAIN, 30));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(97, 10, 245, 57);
-		lblNewLabel.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel);
+		JLabel lblINICIARSESION = new JLabel("INICIAR SESIÓN");
+		lblINICIARSESION.setFont(new Font("Tw Cen MT", Font.PLAIN, 30));
+		lblINICIARSESION.setHorizontalAlignment(SwingConstants.CENTER);
+		lblINICIARSESION.setBounds(97, 10, 245, 57);
+		lblINICIARSESION.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblINICIARSESION);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nombre Usuario:");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(24, 78, 160, 25);
-		lblNewLabel_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1);
+		JLabel lblUsuario = new JLabel("Nombre Usuario:");
+		lblUsuario.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblUsuario.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
+		lblUsuario.setBounds(24, 78, 160, 25);
+		lblUsuario.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblUsuario);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Contraseña:");
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
-		lblNewLabel_1_1.setBounds(24, 108, 160, 25);
-		lblNewLabel_1_1.setForeground(new Color(183, 188, 210));
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblContraseña = new JLabel("Contraseña:");
+		lblContraseña.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblContraseña.setFont(new Font("Tw Cen MT", Font.PLAIN, 20));
+		lblContraseña.setBounds(24, 108, 160, 25);
+		lblContraseña.setForeground(new Color(183, 188, 210));
+		contentPane.add(lblContraseña);
 		
 		txtMedacgmailcom = new JTextField();
 		txtMedacgmailcom.setFont(new Font("Tw Cen MT", Font.PLAIN, 12));
